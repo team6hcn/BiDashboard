@@ -86,7 +86,6 @@ def plot_sales_over_time(transactions):
     plt.xticks(rotation=45)  # Incline les étiquettes de l'axe des x
     st.pyplot(fig)
 
-
 def plot_sales_by_category(transactions, products):
     """Plot sales by category as a pie chart."""
     merged = pd.merge(transactions, products, on="Code Produit", how="inner")
@@ -97,7 +96,6 @@ def plot_sales_by_category(transactions, products):
     ax.set_title("Répartition des ventes par catégorie", fontsize=14)
     ax.set_ylabel("")  # Remove default ylabel
     st.pyplot(fig)
-
 
 def display_top_products(transactions):
     """Display a table of top-selling products."""
@@ -127,7 +125,7 @@ def display_top_products(transactions):
 st.title("Tableau de Bord - Gestion des Ventes")
 
 # Step 1: Template Download
-st.header("Télécharger le modèle Excel")
+st.header("Téléchargez le modèle Excel que vous devez remplir pour afficher votre tableau de bord.")
 if st.button("Télécharger le modèle Excel vide"):
     create_empty_template()
     with open(template_file_name, "rb") as file:
