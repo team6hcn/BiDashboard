@@ -126,10 +126,10 @@ st.title("Tableau de Bord - Gestion des Ventes")
 
 # Step 1: Template Download
 st.header("Téléchargez le modèle Excel que vous devez remplir pour afficher votre tableau de bord.")
-if st.button("Télécharger le modèle Excel vide"):
+if st.button("Générer le modèle Excel"):
     create_empty_template()
     with open(template_file_name, "rb") as file:
-        st.download_button(label="Télécharger", data=file, file_name=template_file_name)
+        st.download_button(label="Télécharger le modèle ici", data=file, file_name=template_file_name)
 
 # Step 2: Upload the Excel File
 st.header("Uploader le fichier Excel")
