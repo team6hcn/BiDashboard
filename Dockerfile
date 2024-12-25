@@ -17,6 +17,7 @@ RUN ln -s /usr/bin/python3 /usr/bin/python && \
     ln -s /usr/bin/pip3 /usr/bin/pip  
 
 # Cloner le dépôt de l'application
+ARG CACHEBUST=1
 RUN git clone https://github.com/team6hcn/BiDashboard.git .  
 
 # Installer les dépendances Python
