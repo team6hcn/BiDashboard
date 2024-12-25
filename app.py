@@ -36,7 +36,7 @@ def calculate_kpis(filtered_transactions):
     """Calculate KPIs for the dashboard."""
     kpis = {}
     if not filtered_transactions.empty:
-        kpis['Chiffre d\'affaires total'] = filtered_transactions['Prix total'].sum()
+        kpis['Chiffre daffaires total'] = filtered_transactions['Prix total'].sum()
         kpis['Nombre total de transactions'] = len(filtered_transactions)
         kpis['Quantité totale vendue'] = filtered_transactions['Quantité'].sum()
         if 'Nom Produit' in filtered_transactions.columns:
@@ -159,7 +159,7 @@ if uploaded_file:
         col1, col2, col3 = st.columns(3)
 
         with col1:
-            value = f"{kpis['Chiffre d\'affaires total']} DZD"
+            value = f"{kpis['Chiffre daffaires total']} DZD"
             st.metric(label="Chiffre d'affaires total", value=value)
 
         with col2:
